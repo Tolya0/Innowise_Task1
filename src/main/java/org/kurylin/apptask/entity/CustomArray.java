@@ -15,6 +15,10 @@ public class CustomArray implements ArrayObservable {
     private final String name;
     private final List<ArrayObserver> observers;
 
+    public CustomArray() {
+        this(new int[0], "");
+    }
+
     public CustomArray(int[] array, String name) {
         this.array = array != null ? array.clone() : new int[0];
         this.name = name != null ? name : "";
